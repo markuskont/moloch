@@ -45,7 +45,7 @@ BloomSource.prototype.getDomain = function(domain, cb) {
     this.bloom.add(domain);
     return cb(null, {num: 1, buffer: wiseSource.encode(this.tagsField, this.tagval)});
   }
-  return cb(null, wiseSource.emptyResult);
+  return cb(null, undefined);
 };
 //////////////////////////////////////////////////////////////////////////////////
 exports.initSource = function(api) {
