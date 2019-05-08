@@ -18,6 +18,11 @@ function BloomSource (api, section) {
   this.bits = api.getConfig(section, "bits");
   this.fn = api.getConfig(section, "functions");
   this.tagval = api.getConfig(section, "tag");
+
+  if (this.bits === undefined || this.fn === undefined || this.tagval === undefined) {
+    return console.log(this.section, "- missing config options");
+  }
+
   this.dns = new bloom.BloomFilter(
     this.bits, // number of bits to allocate.
     this.fn    // number of hash functions.

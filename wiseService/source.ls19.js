@@ -25,6 +25,9 @@ function LockedShieldsSource (api, section) {
   this.auth = "Basic " + new Buffer(this.user + ":" + this.pass).toString("base64");
 
   // Check if variables needed are set, if not return
+  if (this.file === undefined || this.url === undefined) {
+    return console.log(this.section, "- needs input file or url");
+  }
 
   // Setup any other things
   this.ips  = new HashTable();
