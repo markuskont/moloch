@@ -293,7 +293,7 @@ WISESource.result2Str = function(result, indent) {
     if (i > 0) {
       str += ",\n";
     }
-    str += indent + "{field: \"" + WISESource.pos2Field[pos] + "\", len: " + len + ", value: \"" + value + "\"}";
+    str += indent + "{\"field\": \"" + WISESource.pos2Field[pos] + "\", \"len\": " + len + ", \"value\": \"" + value + "\"}";
   }
 
   return str + "]\n";
