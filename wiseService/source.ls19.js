@@ -258,7 +258,7 @@ LockedShieldsSource.prototype.getTuple = function(tuple, cb) {
   var hasDest = this.data.dst.bucket.has(dst);
 
   if (!hasSource && !hasDest) {
-    return cb(null, wiseSource.emptyResult);
+    return cb(null, undefined);
   }
 
   var out = {num: 0, buffer: new Buffer(0)};
